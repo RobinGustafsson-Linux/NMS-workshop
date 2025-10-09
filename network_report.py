@@ -46,3 +46,12 @@ with open("network_report.txt", "w", encoding="utf-8") as report:
         report.write(f"  {device['hostname']:15} {device['ip_address']:15} {device['type']:12} {device['site']} (uptime: {device['uptime_days']} dagar)\n")
     report.write("\n")
                  
+# Total devices per count 
+type_count = {} 
+for device in devices:
+    device_type = device["type"]
+    type_count[device_type] = type_count.get(device_type, 0) + 1
+
+
+ 
+      
