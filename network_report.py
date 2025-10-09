@@ -22,7 +22,7 @@ with open("network_report.txt", "w", encoding="utf-8") as report:
     report.write("=" * 80 + "/n")
     report.write(f"NÄTVERKSRAPPORT - {company}/n")
     report.write("=" * 80 + "/n")
-    report.write(f"rapportdatum: {datetime.now().strftime('%Y-YY-%m-%d %H:%M')}/n")
+    report.write(f"rapportdatum: {datetime.now().strftime('%Y-YY-%m-%d %H:%M')}/n") # current date and time .strftime to format.
     report.write(f"Datauppdatering: {last_updated}/n/n")
 
 
@@ -34,6 +34,7 @@ warning_devices = [device for device in devices if device["status"] == "warning"
 report.write("ENHETER MED PROBLEM/n")
 report.write("-------------------/n")
 
+# f strings to format the output
 report.write("Status: Offline/n")
 for device in offline_devices:
     report.write(f"- {device['hostname']:15} {device['ip_address']:15} {device['type']:12} {device['site']}/n")
