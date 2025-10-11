@@ -47,11 +47,18 @@ with open("network_report.txt", "w", encoding="utf-8") as report:
     report.write("\n")
                  
 # Total devices per count 
-type_count = {} 
-for device in devices:
-    device_type = device["type"]
-    type_count[device_type] = type_count.get(device_type, 0) + 1
+    type_count = {} 
+    for device in devices:
+        device_type = device["type"]
+        type_count[device_type] = type_count.get(device_type, 0) + 1
 
+# loops through all devices and writes how many of each type there are
+    report.write("STATISTIK PER ENHETSTYP\n")
+    report.write("-----------------------\n")
+    total_devices = len(devices)
+    for device_type, count in type_count.items():
+        report.write(f"{device_type:15}: {count} st\n")
+    report.write(f"Totalt antal enheter: {total_devices}\n\n")
 
  
       
