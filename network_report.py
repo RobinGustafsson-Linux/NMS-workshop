@@ -75,4 +75,14 @@ with open("network_report.txt", "w", encoding="utf-8") as report:
 # Port usage by switches
 
 switches = [device for device in devices if device["type"] == "switch" and "ports" in device]
-total_ports = sum(device["ports"]["used"] for device in switches)
+total_ports_used = sum(device["ports"]["used"] for device in switches)
+total_ports_total = sum(device["ports"]["total"] for device in switches)
+usage_percentage = (total_ports_used / total_ports_total * 100) if total_ports_total else 0
+
+report.write("PORTANVÄNDNING PÅ SWITCHAR\n")
+report.write("--------------------------\n")
+report.write(f"Totalt: {total_ports_used}/{total_ports_total} portar används ({usage_percentage:.1f}%\n\n")
+
+# Switches with high port usage > 80%
+
+
