@@ -1,7 +1,7 @@
 ================================================================================
 NÄTVERKSRAPPORT - TechCorp AB
 ================================================================================
-rapportdatum: 2025-10-09 15:29
+rapportdatum: 2025-10-11 22:57
 Datauppdatering: 2024-09-30T10:30:00
 
 ENHETER MED PROBLEM
@@ -14,4 +14,43 @@ Status: WARNING
   AP-FLOOR2-02    192.168.20.102  access_point Huvudkontor (uptime: 2 dagar)
   RT-LAGER-01     192.168.2.254   router       Lager (uptime: 2 dagar)
   SW-DC-TOR-02    10.0.1.2        switch       Datacenter (uptime: 5 dagar)
+
+STATISTIK PER ENHETSTYP
+-----------------------
+switch         : 18 st
+router         : 6 st
+access_point   : 9 st
+firewall       : 5 st
+load_balancer  : 2 st
+Totalt antal enheter: 40
+
+ENHETER MED LÅG UPTIME (<30 DAGAR)
+----------------------------------
+ SW-ACCESS-03    0 dagar Huvudkontor
+ SW-ACCESS-05    15 dagar Huvudkontor
+ AP-FLOOR2-01    12 dagar Huvudkontor
+ AP-FLOOR2-02    2 dagar Huvudkontor
+ SW-LAGER-02     23 dagar Lager
+ RT-LAGER-01     2 dagar Lager
+ AP-LAGER-02     0 dagar Lager
+ SW-MAL-ACC-02   8 dagar Kontor MalmÃ¶
+ SW-DC-TOR-02    5 dagar Datacenter
+
+PORTANVÄNDNING PÅ SWITCHAR
+--------------------------
+Totalt: 541/676 portar används (80.0%
+
+SWITCHAR MED HÖG PORTANVÄNDNING (>80%)
+---------------------------------------
+ SW-CORE-01      42/48  (87.5%) Huvudkontor
+ SW-DIST-02      22/24  (91.7%) Huvudkontor
+ SW-ACCESS-05    23/24  (95.8%) Huvudkontor
+ SW-LAGER-02     45/48  (93.8%) Lager
+ SW-MAL-ACC-01   20/24  (83.3%) Kontor MalmÃ¶
+ SW-MAL-ACC-02   24/24  (100.0%) Kontor MalmÃ¶
+ SW-DC-CORE-01   46/48  (95.8%) Datacenter
+ SW-DC-CORE-02   46/48  (95.8%) Datacenter
+ SW-DC-TOR-01    48/48  (100.0%) Datacenter
+ SW-DC-TOR-02    47/48  (97.9%) Datacenter
+ SW-DC-TOR-03    44/48  (91.7%) Datacenter
 
