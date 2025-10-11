@@ -61,4 +61,18 @@ with open("network_report.txt", "w", encoding="utf-8") as report:
     report.write(f"Totalt antal enheter: {total_devices}\n\n")
 
  
-      
+# Devices with low uptime < 30 days
+    low_uptime_devices = [device for device in devices if device["uptime_days"] < 30]
+    
+    report.write("ENHETER MED LÅG UPTIME (<30 DAGAR)\n")
+    report.write("----------------------------------\n")
+    for device in low_uptime_devices:
+        report.write(f" {device["hostname"]:15} {device["uptime_days"]} dagar {device["site"]}\n")
+    report.write("\n")
+
+
+# Del B
+# Port usage by switches
+
+switches = [device for device in devices if device["type"] == "switch" and "ports" in device]
+total_ports = sum(device["ports"]["used"] for device in switches)
