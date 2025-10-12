@@ -94,4 +94,37 @@ with open("network_report.txt", "w", encoding="utf-8") as report:
             report.write(f" {device["hostname"]:15} {used}/{total}  ({pct:.1f}%) {device["site"]}\n") 
     report.write("\n")
 
+# All vlans in the network
+    all_vlans = set()
+    for device in devices:
+        for vlan in device.get("vlans", []):
+            all_vlans.add(vlan)
 
+    report.write("VLAN ÖVERSIKT\n")
+    report.write("-------------\n")
+    report.write(f"Antal unika VLANs: {len[all_vlans]}\n")
+
+# Statistics per site
+    report.write("STATISTIK PER SITE\n")
+    report.write("------------------\n")
+
+    for location in locations:
+        site = location["site"]
+        device_in_site = location["devices"]
+        total = len(devices_in_site)
+        online = len([device for device in devices_in_site if device["status"] == "online"])
+        offline = len([device for device in devices_in_site if device["status"] == "offline"])
+        warning = len([device for device in devices_in_site if device["status"] == "warning"])
+        contact = location["contact"]
+
+
+        report.write(f"{site}:\n") 
+        report.write(f" Enheter: {total} (online: {online}, offline: {offline}, warning: {warning})\n")
+        report.write(f" kontakt: {contact}\n\n")
+
+
+    report.write("=" * 80 + "\n")
+    report.write("RAPPORT SLUT\n")
+    report.write("=" * 80 + "\n")
+
+print("Rapporten har skapats: network_report.txt (utf-8)")
