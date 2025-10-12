@@ -82,7 +82,7 @@ with open("network_report.txt", "w", encoding="utf-8") as report:
 
     report.write("PORTANVÄNDNING PÅ SWITCHAR\n")
     report.write("--------------------------\n")
-    report.write(f"Totalt: {total_ports_used}/{total_ports_total} portar används ({usage_percentage:.1f}%\n\n")
+    report.write(f"Totalt: {total_ports_used}/{total_ports_total} portar används ({usage_percentage:.1f}%)\n\n")
 
 # Switches with high port usage > 80%
     report.write("SWITCHAR MED HÖG PORTANVÄNDNING (>80%)\n")

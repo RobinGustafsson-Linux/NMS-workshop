@@ -1,7 +1,7 @@
 ================================================================================
 NÄTVERKSRAPPORT - TechCorp AB
 ================================================================================
-rapportdatum: 2025-10-12 11:06
+rapportdatum: 2025-10-12 20:37
 Datauppdatering: 2024-09-30T10:30:00
 
 ENHETER MED PROBLEM
@@ -38,7 +38,7 @@ ENHETER MED LÅG UPTIME (<30 DAGAR)
 
 PORTANVÄNDNING PÅ SWITCHAR
 --------------------------
-Totalt: 541/676 portar används (80.0%
+Totalt: 541/676 portar används (80.0%)
 
 SWITCHAR MED HÖG PORTANVÄNDNING (>80%)
 ---------------------------------------
