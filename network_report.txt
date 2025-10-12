@@ -1,7 +1,7 @@
 ================================================================================
 NÄTVERKSRAPPORT - TechCorp AB
 ================================================================================
-rapportdatum: 2025-10-11 22:57
+rapportdatum: 2025-10-12 11:06
 Datauppdatering: 2024-09-30T10:30:00
 
 ENHETER MED PROBLEM
@@ -33,7 +33,7 @@ ENHETER MED LÅG UPTIME (<30 DAGAR)
  SW-LAGER-02     23 dagar Lager
  RT-LAGER-01     2 dagar Lager
  AP-LAGER-02     0 dagar Lager
- SW-MAL-ACC-02   8 dagar Kontor MalmÃ¶
+ SW-MAL-ACC-02   8 dagar Kontor Malmö
  SW-DC-TOR-02    5 dagar Datacenter
 
 PORTANVÄNDNING PÅ SWITCHAR
@@ -46,11 +46,41 @@ SWITCHAR MED HÖG PORTANVÄNDNING (>80%)
  SW-DIST-02      22/24  (91.7%) Huvudkontor
  SW-ACCESS-05    23/24  (95.8%) Huvudkontor
  SW-LAGER-02     45/48  (93.8%) Lager
- SW-MAL-ACC-01   20/24  (83.3%) Kontor MalmÃ¶
- SW-MAL-ACC-02   24/24  (100.0%) Kontor MalmÃ¶
+ SW-MAL-ACC-01   20/24  (83.3%) Kontor Malmö
+ SW-MAL-ACC-02   24/24  (100.0%) Kontor Malmö
  SW-DC-CORE-01   46/48  (95.8%) Datacenter
  SW-DC-CORE-02   46/48  (95.8%) Datacenter
  SW-DC-TOR-01    48/48  (100.0%) Datacenter
  SW-DC-TOR-02    47/48  (97.9%) Datacenter
  SW-DC-TOR-03    44/48  (91.7%) Datacenter
 
+VLAN ÖVERSIKT
+-------------
+Antal unika VLANs: 19
+VLANs: 10, 20, 30, 40, 50, 100, 110, 120, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 2000, 2100
+
+STATISTIK PER SITE
+------------------
+Huvudkontor:
+ Enheter: 15 (online: 13, offline: 1, warning: 1)
+ kontakt: Anna Andersson
+
+Lager:
+ Enheter: 5 (online: 3, offline: 1, warning: 1)
+ kontakt: Björn Björnsson
+
+Kontor Malmö:
+ Enheter: 7 (online: 7, offline: 0, warning: 0)
+ kontakt: Cecilia Carlsson
+
+Datacenter:
+ Enheter: 10 (online: 9, offline: 0, warning: 1)
+ kontakt: David Davidsson
+
+Säkerhetskopia:
+ Enheter: 3 (online: 3, offline: 0, warning: 0)
+ kontakt: Erik Eriksson
+
+================================================================================
+RAPPORT SLUT
+================================================================================

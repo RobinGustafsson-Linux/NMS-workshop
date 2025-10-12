@@ -2,8 +2,9 @@ import json
 from datetime import datetime
 
 
+
 # to read the json file
-with open("network_devices.json", "r") as file:
+with open("network_devices.json", "r", encoding="utf-8") as file:
     data = json.load(file)
 
     company = data["company"]
@@ -87,8 +88,8 @@ with open("network_report.txt", "w", encoding="utf-8") as report:
     report.write("SWITCHAR MED HÖG PORTANVÄNDNING (>80%)\n")
     report.write("---------------------------------------\n")
     for device in switches:
-        used = device["ports"]["used"] # number of used ports
-        total = device["ports"]["total"] # total number of ports
+        used = device["ports"]["used"] 
+        total = device["ports"]["total"] 
         pct = used / total * 100 if total else 0 # percentage of used ports
         if pct > 80:    # if percentage is greater than 80% write out the report below
             report.write(f" {device["hostname"]:15} {used}/{total}  ({pct:.1f}%) {device["site"]}\n") 
@@ -102,7 +103,9 @@ with open("network_report.txt", "w", encoding="utf-8") as report:
 
     report.write("VLAN ÖVERSIKT\n")
     report.write("-------------\n")
-    report.write(f"Antal unika VLANs: {len[all_vlans]}\n")
+    report.write(f"Antal unika VLANs: {len(all_vlans)}\n")
+    report.write(f"VLANs: {', '.join(map(str, sorted(all_vlans)))}\n\n")
+
 
 # Statistics per site
     report.write("STATISTIK PER SITE\n")
@@ -110,7 +113,7 @@ with open("network_report.txt", "w", encoding="utf-8") as report:
 
     for location in locations:
         site = location["site"]
-        device_in_site = location["devices"]
+        devices_in_site = location["devices"]
         total = len(devices_in_site)
         online = len([device for device in devices_in_site if device["status"] == "online"])
         offline = len([device for device in devices_in_site if device["status"] == "offline"])
@@ -127,4 +130,4 @@ with open("network_report.txt", "w", encoding="utf-8") as report:
     report.write("RAPPORT SLUT\n")
     report.write("=" * 80 + "\n")
 
-print("Rapporten har skapats: network_report.txt (utf-8)")
+print("Rapporten har skapats: network_report.txt")
